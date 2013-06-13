@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2013 the original author or authors.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE suppressions PUBLIC
+		"-//Puppy Crawl//DTD Suppressions 1.1//EN"
+		"http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+<suppressions>
+	<suppress files="EmailExtended.java" checks="LineLength" lines="46,47" />
+
+	<!-- CheckStyle doesn't support annotation Javadoc, so all annotation attribute checks have to be suppressed -->
+	<suppress files="DecimalRange.java" checks="JavadocMethod" />
+	<suppress files="ExpressionForClass.java" checks="JavadocMethod" />
+	<suppress files="ExpressionForMethod.java" checks="JavadocMethod" />
+	<suppress files="Future.java" checks="JavadocMethod" />
+	<suppress files="Modulus.java" checks="JavadocMethod" />
+	<suppress files="NotNullDecimalMax.java" checks="JavadocMethod" />
+	<suppress files="NotNullDecimalMin.java" checks="JavadocMethod" />
+	<suppress files="NotNullDigits.java" checks="JavadocMethod" />
+	<suppress files="NotNullMax.java" checks="JavadocMethod" />
+	<suppress files="NotNullMin.java" checks="JavadocMethod" />
+	<suppress files="NotNullModulus.java" checks="JavadocMethod" />
+	<suppress files="NotNullPattern.java" checks="JavadocMethod" />
+	<suppress files="NotNullSize.java" checks="JavadocMethod" />
+	<suppress files="NotNullUri.java" checks="JavadocMethod" />
+	<suppress files="NotNullUrl.java" checks="JavadocMethod" />
+	<suppress files="PasswordScore.java" checks="JavadocMethod" />
+	<suppress files="PasswordContent.java" checks="JavadocMethod" />
+	<suppress files="Past.java" checks="JavadocMethod" />
+	<suppress files="Range.java" checks="JavadocMethod" />
+	<suppress files="Uri.java" checks="JavadocMethod" />
+	<suppress files="Url.java" checks="JavadocMethod" />
+</suppressions>
