@@ -23,7 +23,7 @@
 	<!-- CheckStyle doesn't support annotation Javadoc, so all annotation attribute checks have to be suppressed -->
 	<suppress files="DecimalRange.java" checks="JavadocMethod" />
 	<suppress files="ExpressionForClass.java" checks="JavadocMethod" />
-	<suppress files="ExpressionForMethod.java" checks="JavadocMethod" />
+	<suppress files="ExpressionForExecutable.java" checks="JavadocMethod" />
 	<suppress files="Future.java" checks="JavadocMethod" />
 	<suppress files="Modulus.java" checks="JavadocMethod" />
 	<suppress files="NotNullDecimalMax.java" checks="JavadocMethod" />

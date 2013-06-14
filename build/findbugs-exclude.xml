@@ -15,5 +15,12 @@
   ~ limitations under the License.
   -->
 <FindBugsFilter>
-
+	<Match>
+		<Class name="net.nicholaswilliams.java.validation.support.el.JuelExpressionValidator$BeanNameELResolver" />
+		<Or>
+			<Method name="getType" />
+			<Method name="getValue" />
+		</Or>
+		<Bug pattern="NP_LOAD_OF_KNOWN_NULL_VALUE" />
+	</Match>
 </FindBugsFilter>
