@@ -23,6 +23,8 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+import net.nicholaswilliams.java.validation.support.ExpressionForExecutableValidator;
+
 /**
  * Special constraint annotation that defines an arbitrary expression that validates the parameters of an executable.
  * This is useful for ensuring that a property has a certain value based on the value of another property, for example.
@@ -45,8 +47,8 @@ import javax.validation.Payload;
 @Target({ ElementType.CONSTRUCTOR, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = {  }) //TODO: implement validator
-public @interface ExpressionForMethod
+@Constraint(validatedBy = { ExpressionForExecutableValidator.class })
+public @interface ExpressionForExecutable
 {
 	/**
 	 * Indicates the expression to evaluate the method parameters with. The name of the reference variables to access
@@ -71,7 +73,7 @@ public @interface ExpressionForMethod
 	 */
 	String language() default Constants.JAVA_UNIFIED_EXPRESSION_LANGUAGE;
 
-	String message() default "{net.nicholaswilliams.java.validation.ExpressionForMethod.message}";
+	String message() default "{net.nicholaswilliams.java.validation.ExpressionForExecutable.message}";
 
 	Class<?>[] groups() default { };
 
@@ -85,6 +87,6 @@ public @interface ExpressionForMethod
 	@Documented
 	static @interface List
 	{
-		ExpressionForMethod[] value();
+		ExpressionForExecutable[] value();
 	}
 }

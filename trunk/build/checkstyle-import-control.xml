@@ -34,5 +34,24 @@
 	<disallow pkg="com.sun" />
 	<disallow pkg="oracle" />
 	<disallow pkg="com.oracle" />
+	<disallow pkg="javax.el" />
+	<disallow pkg="org.joda" />
+	<disallow pkg="java.time" />
+
+	<subpackage name="support">
+
+		<subpackage name="el">
+			<allow pkg="javax.el" />
+		</subpackage>
+
+		<subpackage name="joda">
+			<allow pkg="org.joda" />
+		</subpackage>
+
+		<subpackage name="jdk8">
+			<allow pkg="java.time" />
+		</subpackage>
+
+	</subpackage>
 
 </import-control>

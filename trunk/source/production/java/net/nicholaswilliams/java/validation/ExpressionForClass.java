@@ -23,6 +23,8 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+import net.nicholaswilliams.java.validation.support.ExpressionForClassValidator;
+
 /**
  * Special constraint annotation that defines an arbitrary expression that validates the properties of a bean. This is
  * useful for ensuring that a property has a certain value based on the value of another property, for example. As such,
@@ -44,7 +46,7 @@ import javax.validation.Payload;
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = {  }) //TODO: implement validator
+@Constraint(validatedBy = { ExpressionForClassValidator.class })
 public @interface ExpressionForClass
 {
 	/**
